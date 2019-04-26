@@ -397,5 +397,10 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+.my-picture {
+  border-radius: 20%; }
+
+* {
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=main.css.map */

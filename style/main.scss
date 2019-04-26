@@ -1,1 +1,6 @@
 @import 'vendor/skeleton';
+@import 'vendor/tweaks';
+
+* {
+    box-sizing: border-box;
+}

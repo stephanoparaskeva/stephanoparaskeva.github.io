@@ -4,107 +4,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./style/main.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
     <script src="./app.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <meta charset="utf-8">
     <title></title>
   </head>
+  
   <body>
-    <section class="container" id="splash">
-      <div class="splash-content container">
-        <nav class="row">
-          <a href="#about">about</a>
-          <a href="#technologies">technologies</a>
-          <a href="#top"><img src="#" alt="stephano logo"></a>
-          <a href="#projects">projects</a>
-          <a href="#contact">contact</a>
-        </nav>
-        <h1>Stephano Paraskeva</h1>
-      <h3>Junior Developer / Software Engineer</h3>
-      </div>
-    </section>
-      <section class="container" id="about">
-        <div class="row">about</div>
-        <div class="row">
-          <div class="six columns">
-            <img class="my-picture" src="https://i.imgur.com/XEtjPk4.jpg?1" alt="">
-          </div>
-          <div class="six columns">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptas porro labore explicabo amet alias deserunt esse 
-            assumenda, quod dolorum corporis impedit quis. Voluptatum exercitationem quae placeat velit minima nihil.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempora earum quisquam sapiente id! 
-            Vero cumque minus accusantium quia praesentium amet eligendi, alias, a odit aliquam nostrum ad quas eaque.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis accusantium, reiciendis asperiores fugiat 
-            maiores at libero incidunt recusandae minus atque error eveniet minima quis sit rerum temporibus reprehenderit consectetur mollitia.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptas porro labore explicabo amet alias deserunt esse 
-            assumenda, quod dolorum corporis impedit quis. Voluptatum exercitationem quae placeat velit minima nihil.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempora earum quisquam sapiente id! 
-            Vero cumque minus accusantium quia praesentium amet eligendi, alias, a odit aliquam nostrum ad quas eaque.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis accusantium, reiciendis asperiores fugiat 
-            maiores at libero incidunt recusandae minus atque error eveniet minima quis sit rerum temporibus reprehenderit consectetur mollitia.
-          </div>
-      </div>
-    </section>
-    <section class="container" id="technologies">
-      <div class="row">technologies</div>
-        <div class="row">
-          <div class="six columns">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde blanditiis, ad ha
-                voluptas omnis pariatur quis temporibus accusamus soluta voluptates laboriosam aut quidem illo 
-                velit officiis sed! Id, doloribus fugiat.
-          </div>
-          <div class="six columns">
+      <header>
+          <nav>
+            <a href="#about" class="about-btn">about</a>
+            <a href="#technologies" class="tech-btn">technologies</a>
+            <a href="#top">logo</a>
+            <a href="#projects" class="project-btn">projects</a>
+            <a href="#contact" class="contact-btn">contact</a>
+          </nav>
+      </header>
+    <div id="particles-js"></div>
+    
+    <main>
+        <section class="about-btn" id="about">
+            <h3>about</h3>
+            <div class="container" id="about">
+                <div class="row">
+                  <div class="six columns">
+                    <img class="my-picture" src="https://i.imgur.com/XEtjPk4.jpg?1" alt="">
+                  </div>
+                  <div class="six columns">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptas porro labore explicabo amet alias deserunt esse 
+                    assumenda, quod dolorum corporis impedit quis. Voluptatum exercitationem quae placeat velit minima nihil.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempora earum quisquam sapiente id! 
+                    Vero cumque minus accusantium quia praesentium amet eligendi, alias, a odit aliquam nostrum ad quas eaque.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis accusantium, reiciendis asperiores fugiat 
+                    maiores at libero incidunt recusandae minus atque error eveniet minima quis sit rerum temporibus reprehenderit consectetur mollitia.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptas porro labore explicabo amet alias deserunt esse 
+                    assumenda, quod dolorum corporis impedit quis. Voluptatum exercitationem quae placeat velit minima nihil.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempora earum quisquam sapiente id! 
+                    Vero cumque minus accusantium quia praesentium amet eligendi, alias, a odit aliquam nostrum ad quas eaque.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis accusantium, reiciendis asperiores fugiat 
+                    maiores at libero incidunt recusandae minus atque error eveniet minima quis sit rerum temporibus reprehenderit consectetur mollitia.
+                  </div>
+              </div>
+            </div>
+          </section>
+          
+        <section class="tech-btn" id="tech">
+            <h3>TECH</h3>
+          <div class="container" id="technologies">
               <div class="row">
-                  <i class="tech-icon devicon-javascript-plain"></i>
-                  <i class="tech-icon devicon-react-original"></i>
-                  <i class="tech-icon devicon-jquery-plain"></i>
-                  <i class="tech-icon devicon-html5-plain"></i>
-                  <i class="tech-icon devicon-css3-plain"></i>
-                  <i class="tech-icon devicon-webpack-plain"></i>
-                  <i class="tech-icon devicon-d3js-plain"></i>
-                  <i class="tech-icon devicon-heroku-original"></i>
+                <div class="six columns">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde blanditiis, ad ha
+                      voluptas omnis pariatur quis temporibus accusamus soluta voluptates laboriosam aut quidem illo 
+                      velit officiis sed! Id, doloribus fugiat.
                 </div>
-                <div class="row">
-                  <div id="sunburst"></div>
+                <div class="six columns">
+                    <div class="row">
+                        <i class="tech-icon devicon-javascript-plain"></i>
+                        <i class="tech-icon devicon-react-original"></i>
+                        <i class="tech-icon devicon-jquery-plain"></i>
+                        <i class="tech-icon devicon-html5-plain"></i>
+                        <i class="tech-icon devicon-css3-plain"></i>
+                        <i class="tech-icon devicon-webpack-plain"></i>
+                        <i class="tech-icon devicon-d3js-plain"></i>
+                        <i class="tech-icon devicon-heroku-original"></i>
+                      </div>
+                      <div class="row">
+                          <div id="sunburst"></div>
+                      </div>
+                      <div class="row">
+                        <i class="tech-icon devicon-express-original"></i>
+                        <i class="tech-icon devicon-mongodb-plain"></i>
+                        <i class="tech-icon devicon-postgresql-plain"></i>
+                        <i class="tech-icon devicon-git-plain"></i>
+                        <i class="tech-icon devicon-github-plain"></i>
+                        <i class="tech-icon devicon-mocha-plain"></i>
+                        <i class="tech-icon devicon-python-plain"></i>
+                        <i class="tech-icon devicon-nodejs-plain"></i>
+                      </div>
                 </div>
-                <div class="row">
-                  <i class="tech-icon devicon-express-original"></i>
-                  <i class="tech-icon devicon-mongodb-plain"></i>
-                  <i class="tech-icon devicon-postgresql-plain"></i>
-                  <i class="tech-icon devicon-git-plain"></i>
-                  <i class="tech-icon devicon-github-plain"></i>
-                  <i class="tech-icon devicon-mocha-plain"></i>
-                  <i class="tech-icon devicon-python-plain"></i>
-                  <i class="tech-icon devicon-nodejs-plain"></i>
-                </div>
+              </div>
+            </div>
+          </section>
+         <section class="project-btn" id="project">
+            <h3>projects</h3>
+         <div class="container" id="projects">
+            <div class="row">projects</div>
+            <div class="row">
+              <div class="six columns">
+                project 1
+              </div>
+              <div class="six columns">
+                project 2
+              </div>
+            </div>
+            <div class="row">
+              <div class="six columns">
+                project 3
+              </div>
+              <div class="six columns">
+                project 4
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="container" id="projects">
-        <div class="row">projects</div>
-        <div class="row">
-          <div class="six columns">
-            project 1
+        </section>
+        <section class="contact-btn" id="contact">
+          <h3>contact</h3>
+          <div class="container" id="contact">
+            <div class="row">
+              CONTACT ME AT 
+            </div> 
           </div>
-          <div class="six columns">
-            project 2
-          </div>
-        </div>
-        <div class="row">
-          <div class="six columns">
-            project 3
-          </div>
-          <div class="six columns">
-            project 4
-          </div>
-        </div>
-      </section>
-      <section class="container" id="contact">
-        <div class="row">contact</div>
-        <div class="row">
-          CONTACT ME AT 
-        </div>
-      </section>
+        </section>
+    </main>
     <footer></footer>
   </body>
 </html>
+
+
+
+<!-- <div class="name" id="top">
+    <div class="letter">S</div>
+    <div class="letter">T</div>
+    <div class="letter">E</div>
+    <div class="letter">P</div>
+    <div class="letter">H</div>
+    <div class="letter">A</div>
+    <div class="letter">N</div>
+    <div class="letter">O</div>
+    <div class="letter space">P</div>
+    <div class="letter">A</div>
+    <div class="letter">R</div>
+    <div class="letter">A</div>
+    <div class="letter">S</div>
+    <div class="letter">K</div>
+    <div class="letter">E</div>
+    <div class="letter">V</div>
+    <div class="letter">A</div>
+  </div>
+<h3>Junior Developer / Software Engineer</h3>
+</div> -->

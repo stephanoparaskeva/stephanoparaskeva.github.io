@@ -397,6 +397,11 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0; }
+
 #sunburst {
   width: 100%;
   height: 100%; }
@@ -409,6 +414,97 @@ there.
 
 .modebar {
   display: none !important; }
+
+.name {
+  font-size: 4rem;
+  display: flex;
+  margin: auto;
+  padding: 0 1rem 1rem;
+  position: relative;
+  color: black; }
+  .name:before {
+    content: '';
+    width: 100%;
+    opacity: 0.3;
+    bottom: 0;
+    height: 1px;
+    left: 0;
+    position: absolute; }
+  .name .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.9); }
+
+.space:before {
+  content: " ";
+  display: inline-block;
+  width: 0.5em; }
+
+.about-btn {
+  word-wrap: break-word;
+  margin-top: 20px;
+  width: 7em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: hidden; }
+
+.tech-btn {
+  word-wrap: break-word;
+  margin-top: 20px;
+  width: 7em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: hidden; }
+
+.project-btn {
+  word-wrap: break-word;
+  margin-top: 20px;
+  width: 7em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: hidden; }
+
+.contact-btn {
+  word-wrap: break-word;
+  margin-top: 20px;
+  width: 7em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: hidden; }
+
+body {
+  margin: 0;
+  width: 10em;
+  background-color: #8a8795; }
+
+header {
+  z-index: 999;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  text-align: center; }
+  header a {
+    text-decoration: none;
+    color: black; }
+
+main {
+  width: 10em;
+  background: #475e88;
+  position: absolute; }
+
+canvas {
+  display: block; }
+
+#particles-js {
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #8a8795;
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: 50% 50%; }
 
 * {
   box-sizing: border-box; }

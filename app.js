@@ -1,7 +1,6 @@
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  
+document.addEventListener('DOMContentLoaded', () => {  
   // Produce sunburst
   const data = [{
     type: 'sunburst',

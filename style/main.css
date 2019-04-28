@@ -406,6 +406,9 @@ html {
   width: 100%;
   height: 100%; }
 
+.my-picture {
+  border-radius: 22%; }
+
 .tech-icon {
   font-size: 2.3em; }
 
@@ -439,40 +442,53 @@ html {
 
 .about-btn {
   word-wrap: break-word;
-  margin-top: 20px;
-  width: 7em;
-  height: 3em;
-  background-color: rgba(255, 255, 255, 0);
+  margin-top: 8em;
+  width: 10em;
+  height: 3.5em;
+  -webkit-box-shadow: -1px 2px 1px 9px #515190;
+  -moz-box-shadow: -1px 2px 1px 9px #515190;
+  box-shadow: -1px 2px 1px 9px #515190;
+  background-color: #eaeaea;
   overflow: hidden; }
 
 .tech-btn {
   word-wrap: break-word;
-  margin-top: 20px;
-  width: 7em;
-  height: 3em;
-  background-color: rgba(255, 255, 255, 0);
+  margin-top: 8em;
+  width: 10em;
+  height: 3.5em;
+  -webkit-box-shadow: -1px 2px 1px 9px #515190;
+  -moz-box-shadow: -1px 2px 1px 9px #515190;
+  box-shadow: -1px 2px 1px 9px #515190;
+  background-color: #eaeaea;
   overflow: hidden; }
 
 .project-btn {
   word-wrap: break-word;
-  margin-top: 20px;
-  width: 7em;
-  height: 3em;
-  background-color: rgba(255, 255, 255, 0);
+  margin-top: 8em;
+  width: 10em;
+  height: 3.5em;
+  -webkit-box-shadow: -1px 2px 1px 9px #515190;
+  -moz-box-shadow: -1px 2px 1px 9px #515190;
+  box-shadow: -1px 2px 1px 9px #515190;
+  background-color: #eaeaea;
   overflow: hidden; }
 
 .contact-btn {
   word-wrap: break-word;
-  margin-top: 20px;
-  width: 7em;
-  height: 3em;
-  background-color: rgba(255, 255, 255, 0);
+  margin-top: 8em;
+  width: 10em;
+  height: 3.5em;
+  -webkit-box-shadow: -1px 2px 1px 9px #515190;
+  -moz-box-shadow: -1px 2px 1px 9px #515190;
+  box-shadow: -1px 2px 1px 9px #515190;
+  background-color: #eaeaea;
   overflow: hidden; }
 
 body {
   margin: 0;
   width: 10em;
-  background-color: #8a8795; }
+  color: #000000a6;
+  overflow-x: hidden; }
 
 header {
   z-index: 999;
@@ -483,12 +499,14 @@ header {
   text-align: center; }
   header a {
     text-decoration: none;
-    color: black; }
+    color: white; }
 
 main {
   width: 10em;
-  background: #475e88;
-  position: absolute; }
+  background: #cacaca52;
+  position: absolute;
+  min-height: 100vh;
+  margin-left: 7em; }
 
 canvas {
   display: block; }
@@ -498,10 +516,24 @@ canvas {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #8a8795;
+  background-color: #515190;
   background-repeat: repeat-y;
   background-size: cover;
   background-position: 50% 50%; }
+
+.panel {
+  font-family: 'Source Sans Pro';
+  font-size: 1.3em;
+  position: absolute;
+  z-index: 10;
+  background: #eaeaea;
+  top: 50%;
+  left: 40%;
+  margin: -110px 0 0 -100px;
+  padding: 20px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  z-index: 100; }
 
 * {
   box-sizing: border-box; }

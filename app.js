@@ -1,6 +1,8 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {  
+  
+  let panel = document.querySelector('.panel')
+  
+  
   // Produce sunburst
   const data = [{
     type: 'sunburst',
@@ -34,17 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Animate Title
-    const opac = anime({
-      targets: '.letter',
-      opacity:1,
-      scale:1,
-      ease:'easeInBounce',
-      delay: function(el, index) {
-        return index * 80;
-      },
-      direction: 'alternate',
-      loop: true
-    })
 
     let about = false
     let tech = false
@@ -58,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
           about = true
           var animateGrow = anime({
             targets: '.about-btn',
-            width: [ { value: '100vw' }, { value: '100vw' }],
-            height: [ { value: '75vh' }, { value: '75vh' }],
+            width: [ { value: '75vw' }, { value: '85vw' }],
+            height: [ { value: '7vh' }, { value: '75vh' }],
             duration: 1000
           })
         }
@@ -67,22 +58,29 @@ document.addEventListener('DOMContentLoaded', () => {
           about = false
           var animateGrow = anime({
             targets: '.about-btn',
-            width: [ { value: 100 }, { value: 100 }],
-            height: [ { value: 50 }, { value: 50 }],
+            width: [ { value: 10 }, { value: 9.7 }],
+            height: [ { value: 8 }, { value: 7.5 }],
             duration: 1000
           })
         }
+        if (about || tech || project || contact) {panel.style.display = 'none'}
+        if (!about && !tech && !project && !contact) {panel.style.display = 'block'}
       }
     )
+
+    $('.tech-stack').click(function(event){
+      event.stopPropagation()
+  })
     
     $('.tech-btn').click(
-      function() {
+      function(e) {
+        console.log(e)
         if (!tech) {
           tech = true
           var animateGrow = anime({
             targets: '.tech-btn',
-            width: [ { value: '100vw' }, { value: '100vw' }],
-            height: [ { value: '75vh' }, { value: '75vh' }],
+            width: [ { value: '75vw' }, { value: '85vw' }],
+            height: [ { value: '7vh' }, { value: '75vh' }],
             duration: 1000
           })
         }
@@ -90,11 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
           tech = false
           var animateGrow = anime({
             targets: '.tech-btn',
-            width: [ { value: 100 }, { value: 100 }],
-            height: [ { value: 50 }, { value: 50 }],
+            width: [ { value: 10 }, { value: 9.7 }],
+            height: [ { value: 8 }, { value: 7.5 }],
             duration: 1000
           })
         }
+      if (about || tech || project || contact) {panel.style.display = 'none'}
+      if (!about && !tech && !project && !contact) {panel.style.display = 'block'}
       }
     )
     
@@ -104,8 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
           project = true
           var animateGrow = anime({
             targets: '.project-btn',
-            width: [ { value: '100vw' }, { value: '100vw' }],
-            height: [ { value: '75vh' }, { value: '75vh' }],
+            width: [ { value: '75vw' }, { value: '85vw' }],
+            height: [ { value: '7vh' }, { value: '75vh' }],
             duration: 1000
           })
         }
@@ -113,11 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
           project = false
           var animateGrow = anime({
             targets: '.project-btn',
-            width: [ { value: 100 }, { value: 100 }],
-            height: [ { value: 50 }, { value: 50 }],
+            width: [ { value: 10 }, { value: 9.7 }],
+            height: [ { value: 8 }, { value: 7.5 }],
             duration: 1000
           })
         }
+        if (about || tech || project || contact) {panel.style.display = 'none'}
+        if (!about && !tech && !project && !contact) {panel.style.display = 'block'}
       }
     )
     
@@ -127,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
           contact = true
           var animateGrow = anime({
             targets: '.contact-btn',
-            width: [ { value: '100vw' }, { value: '100vw' }],
-            height: [ { value: '75vh' }, { value: '75vh' }],
+            width: [ { value: '75vw' }, { value: '85vw' }],
+            height: [ { value: '7vh' }, { value: '75vh' }],
             duration: 1000
           })
         }
@@ -136,11 +138,13 @@ document.addEventListener('DOMContentLoaded', () => {
           contact = false
           var animateGrow = anime({
             targets: '.contact-btn',
-            width: [ { value: 100 }, { value: 100 }],
-            height: [ { value: 50 }, { value: 50 }],
+            width: [ { value: 10 }, { value: 9.7 }],
+            height: [ { value: 8 }, { value: 7.5 }],
             duration: 1000
           })
         }
+        if (about || tech || project || contact) {panel.style.display = 'none'}
+        if (!about && !tech && !project && !contact) {panel.style.display = 'block'}
       }
     )
     

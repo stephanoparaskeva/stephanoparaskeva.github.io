@@ -42,111 +42,130 @@ document.addEventListener('DOMContentLoaded', () => {
     let project = false
     let contact = false
 
-    // Expandable buttons
-    $('.about-btn').click(
-      function() {
-        if (!about) {
-          about = true
-          var animateGrow = anime({
-            targets: '.about-btn',
-            width: [ { value: '75vw' }, { value: '85vw' }],
-            height: [ { value: '7vh' }, { value: '75vh' }],
-            duration: 1000
-          })
-        }
-        else if (about) {
-          about = false
-          var animateGrow = anime({
-            targets: '.about-btn',
-            width: [ { value: 10 }, { value: 9.7 }],
-            height: [ { value: 8 }, { value: 7.5 }],
-            duration: 1000
-          })
-        }
-        if (about || tech || project || contact) {panel.style.display = 'none'}
-        if (!about && !tech && !project && !contact) {panel.style.display = 'block'}
-      }
-    )
+    closeAll = function(tabs) {
+      anime.set(tabs, {
+        width: 0,
+        height: 0
+      })
+    }
 
-    $('.tech-stack').click(function(event){
-      event.stopPropagation()
-  })
+    // Expandable buttons
+  //   $('.about-btn').click(
+  //     function() {
+  //       closeAll('.tech-btn .project-btn .contact-btn')
+  //       if (!about) {
+  //         about = true
+  //         var animateGrow = anime({
+  //           targets: '.about-btn',
+  //           width: [ { value: '75vw' }, { value: '85vw' }],
+  //           height: [ { value: '7vh' }, { value: '75vh' }],
+  //           duration: 1000
+  //         })
+  //       }
+  //       else if (about) {
+  //         about = false
+  //         var animateGrow = anime({
+  //           targets: '.about-btn',
+  //                    width: [ { value: 10 }, { value: 9.7 }],
+  //           height: [ { value: 8 }, { value: 7.5 }],
+  //           duration: 1000
+  //         })
+  //       }
+  //       if (about || tech || project || contact) {
+  //         setTimeout(() => {
+  //           panel.style.display = 'none'
+  //         }, 200)
+  //       }
+  //       if (!about && !tech && !project && !contact) {
+  //         setTimeout(() => {
+  //           panel.style.display = 'block'
+  //         }, 260)
+  //       }
+  //     }
+  //   )
+
+  //   $('.tech-stack').click(function(event){
+  //     event.stopPropagation()
+  // })
     
-    $('.tech-btn').click(
-      function(e) {
-        console.log(e)
-        if (!tech) {
-          tech = true
-          var animateGrow = anime({
-            targets: '.tech-btn',
-            width: [ { value: '75vw' }, { value: '85vw' }],
-            height: [ { value: '7vh' }, { value: '75vh' }],
-            duration: 1000
-          })
-        }
-        else if (tech) {
-          tech = false
-          var animateGrow = anime({
-            targets: '.tech-btn',
-            width: [ { value: 10 }, { value: 9.7 }],
-            height: [ { value: 8 }, { value: 7.5 }],
-            duration: 1000
-          })
-        }
-      if (about || tech || project || contact) {panel.style.display = 'none'}
-      if (!about && !tech && !project && !contact) {panel.style.display = 'block'}
-      }
-    )
+  //   $('.tech-btn').click(
+  //     function(e) {
+  //       closeAll('.about-btn .project-btn .contact-btn')
+  //       console.log(e)
+  //       if (!tech) {
+  //         tech = true
+  //         var animateGrow = anime({
+  //           targets: '.tech-btn',
+  //           width: [ { value: '75vw' }, { value: '85vw' }],
+  //           height: [ { value: '7vh' }, { value: '75vh' }],
+  //           duration: 1000
+  //         })
+  //       }
+  //       else if (tech) {
+  //         tech = false
+  //         var animateGrow = anime({
+  //           targets: '.tech-btn',
+  //           width: [ { value: 10 }, { value: 9.7 }],
+  //           height: [ { value: 8 }, { value: 7.5 }],
+  //           duration: 1000
+  //         })
+  //       }
+  //     if (about || tech || project || contact) {panel.style.display = 'none'}
+  //     if (!about && !tech && !project && !contact) {panel.style.display = 'block'}
+  //     }
+  //   )
     
-    $('.project-btn').click(
-      function() {
-        if (!project) {
-          project = true
-          var animateGrow = anime({
-            targets: '.project-btn',
-            width: [ { value: '75vw' }, { value: '85vw' }],
-            height: [ { value: '7vh' }, { value: '75vh' }],
-            duration: 1000
-          })
-        }
-        else if (project) {
-          project = false
-          var animateGrow = anime({
-            targets: '.project-btn',
-            width: [ { value: 10 }, { value: 9.7 }],
-            height: [ { value: 8 }, { value: 7.5 }],
-            duration: 1000
-          })
-        }
-        if (about || tech || project || contact) {panel.style.display = 'none'}
-        if (!about && !tech && !project && !contact) {panel.style.display = 'block'}
-      }
-    )
+  //   $('.project-btn').click(
+  //     function() {
+  //       closeAll('.tech-btn .about-btn .contact-btn')
+  //       if (!project) {
+  //         project = true
+  //         var animateGrow = anime({
+  //           targets: '.project-btn',
+  //           width: [ { value: '75vw' }, { value: '85vw' }],
+  //           height: [ { value: '7vh' }, { value: '75vh' }],
+  //           duration: 1000
+  //         })
+  //       }
+  //       else if (project) {
+  //         project = false
+  //         var animateGrow = anime({
+  //           targets: '.project-btn',
+  //           width: [ { value: 10 }, { value: 9.7 }],
+  //           height: [ { value: 8 }, { value: 7.5 }],
+  //           duration: 1000
+  //         })
+  //       }
+  //       if (about || tech || project || contact) {panel.style.display = 'none'}
+  //       if (!about && !tech && !project && !contact) {panel.style.display = 'block'}
+  //     }
+  //   )
     
-    $('.contact-btn').click(
-      function() {
-        if (!contact) {
-          contact = true
-          var animateGrow = anime({
-            targets: '.contact-btn',
-            width: [ { value: '75vw' }, { value: '85vw' }],
-            height: [ { value: '7vh' }, { value: '75vh' }],
-            duration: 1000
-          })
-        }
-        else if (contact) {
-          contact = false
-          var animateGrow = anime({
-            targets: '.contact-btn',
-            width: [ { value: 10 }, { value: 9.7 }],
-            height: [ { value: 8 }, { value: 7.5 }],
-            duration: 1000
-          })
-        }
-        if (about || tech || project || contact) {panel.style.display = 'none'}
-        if (!about && !tech && !project && !contact) {panel.style.display = 'block'}
-      }
-    )
+  //   $('.contact-btn').click(
+  //     function() {
+  //       closeAll('.tech-btn .project-btn .about-btn')
+  //       if (!contact) {
+  //         contact = true
+  //         var animateGrow = anime({
+  //           targets: '.contact-btn',
+  //           width: [ { value: '75vw' }, { value: '85vw' }],
+  //           height: [ { value: '7vh' }, { value: '75vh' }],
+  //           duration: 1000
+  //         })
+  //       }
+  //       else if (contact) {
+  //         contact = false
+  //         var animateGrow = anime({
+  //           targets: '.contact-btn',
+  //           width: [ { value: 10 }, { value: 9.7 }],
+  //           height: [ { value: 8 }, { value: 7.5 }],
+  //           duration: 1000
+  //         })
+  //       }
+  //       if (about || tech || project || contact) {panel.style.display = 'none'}
+  //       if (!about && !tech && !project && !contact) {panel.style.display = 'block'}
+  //     }
+   // )
     
   
   
@@ -157,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},
     "image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,
     "opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},
-    "line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.37089939156716817,"width":1},"move":{"enable":true,"speed":6,
+    "line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.37089939156716817,"width":1},"move":{"enable":true,"speed":2,
     "direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,
     "rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"grab"},"onclick":{"enable":true,
     "mode":"push"},"resize":true},"modes":{"grab":{"distance":245.6511250891643,"line_linked":{"opacity":0.34486156271553847}},

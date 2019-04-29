@@ -46,25 +46,24 @@ body {
 }
 
 header {
+    top: 0;
     display: flex;
+    position: fixed;
     justify-content: center;
     width: 100vw;
+    background: #383838;
+    border-bottom: 1px solid #808080;
+    z-index: 999;
+    position: fixed;
+    display: flex;
     .navbar {
-        background: #383838;
-        z-index: 999;
-        position: fixed;
         display: flex;
-        justify-content: center;
-        width: 100vw;
+        justify-content: space-around;
+        width: 50vw;
         text-align: center;
-        border-bottom: 1px solid #808080;
         a {
             text-decoration: none;
             color: white;
-            margin-right: 8rem;
-            &.project-nav {
-                margin-right: 2rem;
-            }
         }
     }
 }
@@ -83,6 +82,7 @@ canvas {
 } 
 
 #particles-js {
+    top: 0;
     z-index: -1;
     position:fixed;
     width: 100%;

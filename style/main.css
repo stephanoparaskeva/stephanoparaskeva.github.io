@@ -433,24 +433,24 @@ body {
   overflow-x: hidden; }
 
 header {
+  top: 0;
   display: flex;
+  position: fixed;
   justify-content: center;
-  width: 100vw; }
+  width: 100vw;
+  background: #383838;
+  border-bottom: 1px solid #808080;
+  z-index: 999;
+  position: fixed;
+  display: flex; }
   header .navbar {
-    background: #383838;
-    z-index: 999;
-    position: fixed;
     display: flex;
-    justify-content: center;
-    width: 100vw;
-    text-align: center;
-    border-bottom: 1px solid #808080; }
+    justify-content: space-around;
+    width: 50vw;
+    text-align: center; }
     header .navbar a {
       text-decoration: none;
-      color: white;
-      margin-right: 8rem; }
-      header .navbar a.project-nav {
-        margin-right: 2rem; }
+      color: white; }
 
 .titles::before {
   display: block;
@@ -464,6 +464,7 @@ canvas {
   display: block; }
 
 #particles-js {
+  top: 0;
   z-index: -1;
   position: fixed;
   width: 100%;

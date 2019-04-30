@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {  
-
   
   // Header animation
   (function() {
@@ -26,7 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // create points
         points = [];
-        for(var x = 0; x < width; x = x + width*0.01) {
+        display = width*0.01
+        if (width < 1000) {
+          display = width*0.025
+        }
+        for(var x = 0; x < width; x = x + display) {
             for(var y = 0; y < height; y = y + height*0.1) {
                 var px = x + Math.random()*width*0.1;
                 var py = y + Math.random()*height*0.1;
@@ -369,6 +372,70 @@ $(icons[15]).hover(
   this.style.color = '#5f5f5f'
   }
 )
+
+
+button1 = document.querySelector('.button1')
+button2 = document.querySelector('.button2')
+button3 = document.querySelector('.button3')
+button4 = document.querySelector('.button4')
+
+phone1 = document.querySelector('.phone1')
+phone2= document.querySelector('.phone2')
+phone3 = document.querySelector('.phone3')
+phone4 = document.querySelector('.phone4')
+
+//if ($(phone1).attr("class").split(' ').includes('animated')) {return}
+let clicked = phone2
+phone2.style.display = 'block'
+
+$(button1).click(function() {
+  if(phone1.style.display === 'block') {return}
+  $(phone1).removeClass('animated fadeInUp faster')
+  $(clicked).addClass('animated fadeOutUp faster')
+  setTimeout(() => {
+    $(phone1).addClass('animated fadeInUp faster')
+    $(clicked).removeClass('animated fadeOutUp faster')
+    phone1.style.display = 'block'
+    clicked.style.display = 'none'
+    clicked = phone1
+  }, 600)
+})
+$(button2).click(function() {
+  if(phone2.style.display === 'block') {return}
+  $(phone2).removeClass('animated fadeInUp faster')
+  $(clicked).addClass('animated fadeOutUp faster')
+  setTimeout(() => {
+    $(phone2).addClass('animated fadeInUp faster')
+    $(clicked).removeClass('animated fadeOutUp faster')
+    phone2.style.display = 'block'
+    clicked.style.display = 'none'
+    clicked = phone2
+  }, 600)
+})
+$(button3).click(function() {
+  if(phone3.style.display === 'block') {return}
+  $(phone3).removeClass('animated fadeInUp faster')
+  $(clicked).addClass('animated fadeOutUp faster')
+  setTimeout(() => {
+    $(phone3).addClass('animated fadeInUp faster')
+    $(clicked).removeClass('animated fadeOutUp faster')
+    phone3.style.display = 'block'
+    clicked.style.display = 'none'
+    clicked = phone3
+  }, 600)
+})
+$(button4).click(function() {
+  if(phone4.style.display === 'block') {return}
+  $(phone4).removeClass('animated fadeInUp faster')
+  $(clicked).addClass('animated fadeOutUp faster')
+  setTimeout(() => {
+    $(phone4).addClass('animated fadeInUp faster')
+    $(clicked).removeClass('animated fadeOutUp faster')
+    phone4.style.display = 'block'
+    clicked.style.display = 'none'
+    clicked = phone4
+  }, 600)
+})
 
 
 console.log("\nHey! Great to see you here. \n\nIf you want to talk more, send me an email:\n\nstephanokparaskeva@gmail.com")

@@ -3,6 +3,13 @@ html {
     scroll-snap-type: y mandatory;
 }
 
+body {
+    margin: 0;
+    width: 100vw;
+    background-color: #4941bd;
+    overflow-x: hidden;
+}
+
  .tech-icon {
      font-size: 2.3em;
  }
@@ -12,12 +19,40 @@ html {
 }
 
 .about-btn, .tech-btn, .project-btn, .contact-btn {
+    left: 0;
     scroll-snap-align: start;
 	word-wrap: break-word;
     border-radius: 0.3%;
     width: 100vw;
     background-color: #4941bd;
     overflow: hidden;
+}
+
+.project-btn {
+    color: #efefef;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+
+    .phone {
+        height: 500px;
+        width: 300px;
+
+        &.phone1 {
+            display: none;
+        }
+        &.phone2 {
+            display: none;
+        }
+        &.phone3 {
+            display: none;
+        }
+        &.phone4 {
+            display: none;
+        }
+    }
 }
 
 .spacer {
@@ -94,15 +129,6 @@ html {
     background: #272727;
 }
 
-
-
-body {
-    margin: 0;
-    width: 100vw;
-    color: rgb(0, 0, 0);
-    overflow-x: hidden;
-}
-
 header {
     top: 0;
     display: flex;
@@ -141,17 +167,24 @@ canvas {
         text-align: center;
         font-size: 2.5em;
     }
+    #project-title {
+        color: #efefef;
+    }
  }
 
 
  .large-header {
     position: relative;
-    height: 60vh !important;
+    height: 50vh !important;
     width: 100%;
     overflow: hidden;
     background-size: cover;
     background-position: center center;
     z-index: 1;
+ }
+
+ .content {
+    background-color: #4941bd;
  }
  
  .network .large-header {

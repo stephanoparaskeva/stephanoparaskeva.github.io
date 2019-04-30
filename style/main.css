@@ -495,10 +495,10 @@ canvas {
     margin-top: 3.5em; } }
 @media (max-width: 685px) {
   .hero {
-    margin: 12em 0 9em 24vw; } }
+    margin: 6.5em 0 10.5em 24vw; } }
 @media (max-width: 600px) {
   .hero {
-    margin: 12em 0 10.5em 24vw; } }
+    margin: 6.5em 0 10.5em 24vw; } }
 .titles-container {
   display: flex;
   width: 100vw;

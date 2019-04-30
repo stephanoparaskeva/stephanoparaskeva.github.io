@@ -412,15 +412,19 @@ html {
   display: none !important; }
 
 .about-btn, .tech-btn, .project-btn, .contact-btn {
-  box-shadow: inset 0px 48px 0px -40px #272727;
   scroll-snap-align: start;
   word-wrap: break-word;
-  margin-top: 4em;
+  margin-top: 7em;
   border-radius: 0.3%;
   width: 100vw;
   height: 90vh;
   background-color: #371f84;
   overflow: hidden; }
+
+.spacer {
+  display: block;
+  content: "";
+  height: 0.1px; }
 
 body {
   margin: 0;
@@ -433,8 +437,10 @@ header {
   display: flex;
   position: fixed;
   justify-content: center;
+  font-size: 1.3em;
   width: 100vw;
-  background: #383838;
+  height: 4vh;
+  background: #272727;
   border-bottom: 1px solid #808080;
   z-index: 999;
   position: fixed;
@@ -447,14 +453,6 @@ header {
     header .navbar a {
       text-decoration: none;
       color: white; }
-
-.titles::before {
-  display: block;
-  content: " ";
-  margin-top: -391px;
-  height: 400px;
-  visibility: hidden;
-  pointer-events: none; }
 
 canvas {
   display: block; }
@@ -472,7 +470,7 @@ canvas {
 
 .hero {
   font-family: 'Source Sans Pro';
-  margin: 10em 0 9.5em 28vw;
+  margin: 10em 0 7em 18vw;
   font-size: 1.3em;
   width: 40vw; }
   .hero .hero-content-wrapper {
@@ -485,17 +483,26 @@ canvas {
   .hero .hero-text {
     margin-top: 2.2em; }
 
+@media (max-width: 1200px) {
+  .hero {
+    margin: 4em 0 15.9em 24vw; } }
 @media (max-width: 900px) {
   .hero {
-    margin: 4em 0 0em 32vw; }
+    margin: 4em 0 18.5em 24vw; }
     .hero .hero-content-wrapper {
       flex-direction: column; }
 
   .project-btn {
     margin-top: 3.5em; } }
+@media (max-width: 685px) {
+  .hero {
+    margin: 12em 0 9em 24vw; } }
+@media (max-width: 600px) {
+  .hero {
+    margin: 12em 0 10.5em 24vw; } }
 .titles-container {
   display: flex;
-  width: 95vw;
+  width: 100vw;
   justify-content: center; }
   .titles-container .titles {
     text-decoration: none;

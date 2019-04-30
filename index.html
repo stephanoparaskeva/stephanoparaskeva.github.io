@@ -4,46 +4,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./style/main.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="./app.js"></script>
-    <script src="./lib/anime.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+    <script src="./lib/tweenLite.min.js"></script>
+    <script src="./lib/easePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-      <div id="particle-effect">
+      <div class="network">
           <div class="content">
              <div id="large-header" class="large-header">
                 <canvas id="network-canvas"></canvas>
+                <h1 class="main-title"><span class="thin">STEPHANΩ</span> PARASKEVA</h1>
              </div>
           </div>
        </div>
-    <!-- <div id="particles-js"></div> -->
       <header>
-        <nav class="navbar">
-          <a class="project-nav" href="#project">projects</a>            
-          <a href="#technologies">tech</a>
-          <a href="#top">logo</a>
-          <a href="#about">about</a>
-          <a href="#contact">contact</a>
-        </nav>
-      </header>
+      <nav class="navbar">
+        <a class="project-nav" href="#project">projects</a>            
+        <a href="#technologies">tech</a>
+        <a href="#top">logo</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </header>
     <main>
-      <section class="hero">
-        <div class="hero-content-wrapper">
+      <!-- <section class="hero">
+        <div class="hero-content-wrapper"> -->
           <!-- <div class="hero-picture"><img class="my-picture" src="https://i.imgur.com/0r7Kgrb.png?1" alt=""></div> -->
-          <div class="six columns hero-text">
+          <!-- <div class="six columns hero-text">
             <h1>STEPHANΩ PARASKEVA</h1>
             <h3>Junior Developer / Software Engineer</h3></div>
           </div>
-        </div>
+        </div> -->
       </section>
       <div class="spacer" id="project"></div>
       <section class="project-btn">
-        <div class="titles-container"><a class="titles" href="#project">projects<a></div>
+        <div class="titles-container"><a class="titles" href="#project">projects</a></div>
         <div class="container">
           <div class="row">projects</div>
           
@@ -68,38 +68,91 @@
         </div>
       </section>
       <div class="spacer" id="technologies"></div>
+      <div class="outside-technologies">
+        <div class="row tech-road">
+          <i class="tech-icon devicon-javascript-plain"></i>
+          <i class="tech-icon devicon-react-original"></i>
+          <i class="tech-icon devicon-html5-plain"></i>
+          <i class="tech-icon devicon-css3-plain"></i>
+          <i class="tech-icon devicon-d3js-plain"></i>
+          <i class="tech-icon devicon-jquery-plain"></i>
+          <i class="tech-icon devicon-heroku-original"></i>
+          <i class="tech-icon devicon-express-original"></i>
+          <i class="tech-icon devicon-webpack-plain"></i>
+          <i class="tech-icon devicon-mongodb-plain"></i>
+          <i class="tech-icon devicon-postgresql-plain"></i>
+          <i class="tech-icon devicon-git-plain"></i>
+          <i class="tech-icon devicon-github-plain"></i>
+          <i class="tech-icon devicon-mocha-plain"></i>
+          <i class="tech-icon devicon-python-plain"></i>
+          <i class="tech-icon devicon-nodejs-plain"></i>
+        </div>
+      </div>
       <section class="tech-btn">
-        <div class="titles-container"><a class="titles" href="#technologies">technologies<a></div>
+        <div class="titles-container"><a class="titles" href="#technologies">technologies</a></div>
         <div class="container">
           <div class="row">
             <div class="six columns">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde blanditiis, ad ha
-                  voluptas omnis pariatur quis temporibus accusamus soluta voluptates laboriosam aut quidem illo 
-                  velit officiis sed! Id, doloribus fugiat.
+                <div class="techskills-wrapper">
+                    <div class="techskills-outline-box">
+                      <div class="techskills-inner-wrapper">
+                          
+                          <div class="techskills-box-left">
+                            <div class="techskills-box-left-top">
+                
+                
+                                <p><i class="fas fa-stop"></i> Python</p>
+                                <p><i class="fas fa-stop"></i> Flask</p>
+                                <p><i class="fas fa-stop"></i> Node.js</p>
+                                <p><i class="fas fa-stop"></i> MongoDB</p>
+                                <p><i class="fas fa-stop"></i> Mongoose</p>
+                                <p><i class="fas fa-stop"></i> Express</p>
+                                <p><i class="fas fa-stop"></i> PostgreSQL</p>
+                
+                
+                            </div>
+                            <div class="techskills-box-left-bottom">
+                
+                
+                                <p><i class="fas fa-stop"></i> Agile</p>
+                                <p><i class="fas fa-stop"></i> Rest </p>
+                                <p><i class="fas fa-stop"></i> Crud </p>
+
+
+                                <p><i class="fas fa-stop"></i> Mocha</p>
+                                <p><i class="fas fa-stop"></i> Chai</p>
+                                
+                                
+                
+                            </div>
+                          </div>
+                
+                          <div class="techskills-box-right">
+                
+                  
+                                <p><i class="fas fa-stop"></i> JavaScript</p>
+                                <p><i class="fas fa-stop"></i> React</p>
+                                <p><i class="fas fa-stop"></i> CSS3</p>
+                                <p><i class="fas fa-stop"></i> HTML5</p>
+                                <p><i class="fas fa-stop"></i> jQuery</p>
+                                <p><i class="fas fa-stop"></i> Chart.js</p>
+                                <p><i class="fas fa-stop"></i> Plotly.js</p>
+                                <p><i class="fas fa-stop"></i> Webpack</p>
+                                <p><i class="fas fa-stop"></i> Heroku</p>
+                                <p><i class="fas fa-stop"></i> Bulma</p>
+
+                              
+                              <p><i class="fas fa-stop"></i> Git</p>
+                              <p><i class="fas fa-stop"></i> GitHub</p>
+
+                          </div>
+                        </div>
+                      </div>
+                  </div>
             </div>
             <div class="six columns tech-stack">
               <div class="row">
-                <i class="tech-icon devicon-javascript-plain"></i>
-                <i class="tech-icon devicon-react-original"></i>
-                <i class="tech-icon devicon-jquery-plain"></i>
-                <i class="tech-icon devicon-html5-plain"></i>
-                <i class="tech-icon devicon-css3-plain"></i>
-                <i class="tech-icon devicon-webpack-plain"></i>
-                <i class="tech-icon devicon-d3js-plain"></i>
-                <i class="tech-icon devicon-heroku-original"></i>
-              </div>
-              <div class="row">
                 <div id="sunburst"></div>
-              </div>
-              <div class="row">
-                <i class="tech-icon devicon-express-original"></i>
-                <i class="tech-icon devicon-mongodb-plain"></i>
-                <i class="tech-icon devicon-postgresql-plain"></i>
-                <i class="tech-icon devicon-git-plain"></i>
-                <i class="tech-icon devicon-github-plain"></i>
-                <i class="tech-icon devicon-mocha-plain"></i>
-                <i class="tech-icon devicon-python-plain"></i>
-                <i class="tech-icon devicon-nodejs-plain"></i>
               </div>
             </div>
           </div>
@@ -107,7 +160,7 @@
         </section>
         <div class="spacer" id="about"></div>
         <section class="about-btn">
-          <div class="titles-container"><a class="titles" href="#about">about<a></div>
+          <div class="titles-container"><a class="titles" href="#about">about</a></div>
           <div class="container">
             <div class="row">
               <div class="six columns">
@@ -131,7 +184,7 @@
       </section>
       <div class="spacer" id="contact"></div>
       <section class="contact-btn">
-        <div class="titles-container"><a class="titles" href="#contact">contact<a></div>
+        <div class="titles-container"><a class="titles" href="#contact">contact</a></div>
         <div class="container">
           <div class="row">CONTACT ME AT</div> 
         </div>
@@ -139,6 +192,4 @@
     </main>
   </body>
 </html>
-
-
 

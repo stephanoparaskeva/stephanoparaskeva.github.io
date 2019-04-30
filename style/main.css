@@ -401,10 +401,6 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory; }
 
-#sunburst {
-  width: 100%;
-  height: 100%; }
-
 .tech-icon {
   font-size: 2.3em; }
 
@@ -414,22 +410,67 @@ html {
 .about-btn, .tech-btn, .project-btn, .contact-btn {
   scroll-snap-align: start;
   word-wrap: break-word;
-  margin-top: 7em;
   border-radius: 0.3%;
   width: 100vw;
-  height: 90vh;
-  background-color: #7bb7d4;
+  background-color: #4941bd;
   overflow: hidden; }
 
 .spacer {
   display: block;
   content: "";
-  height: 0.1px; }
+  height: 0px; }
+
+.outside-technologies {
+  color: #5f5f5f;
+  font-size: 1.2em;
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  justify-content: center;
+  width: 100vw;
+  background: #e6e6e6; }
+  .outside-technologies .tech-road {
+    display: flex;
+    justify-content: space-around;
+    width: 60vw; }
+
+@media only screen and (max-width: 661px) {
+  .outside-technologies {
+    font-size: 1em; } }
+@media only screen and (max-width: 580px) {
+  .outside-technologies {
+    font-size: 0.8em; } }
+@media only screen and (max-width: 450px) {
+  .outside-technologies {
+    font-size: 0.7em; } }
+.techskills-wrapper p {
+  margin-bottom: 2px;
+  font-size: 1.4em; }
+.techskills-wrapper .fa-stop {
+  font-size: 0.4em;
+  vertical-align: middle;
+  color: #4941bd; }
+.techskills-wrapper .techskills-outline-box .techskills-inner-wrapper {
+  display: flex;
+  flex-direction: row; }
+  .techskills-wrapper .techskills-outline-box .techskills-inner-wrapper .techskills-box-right {
+    margin-left: 5em; }
+
+#sunburst {
+  width: 100%;
+  height: 100%;
+  background-color: #fefefe; }
+
+.tech-btn {
+  background: #fefefe; }
+
+.contact-btn {
+  background: #272727; }
 
 body {
   margin: 0;
-  width: 0.1em;
-  color: #fff;
+  width: 100vw;
+  color: black;
   overflow-x: hidden; }
 
 header {
@@ -440,7 +481,7 @@ header {
   font-size: 1.3em;
   width: 100vw;
   height: 4vh;
-  background: #272727;
+  background: #fefefe;
   z-index: 999;
   position: fixed;
   display: flex; }
@@ -451,54 +492,11 @@ header {
     text-align: center; }
     header .navbar a {
       text-decoration: none;
-      color: white; }
+      color: #272727; }
 
 canvas {
   display: block; }
 
-#particle-effect {
-  top: 0;
-  z-index: -1;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #272727;
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-position: 50% 50%; }
-
-.hero {
-  font-family: 'Source Sans Pro';
-  margin: 10em 0 7em 18vw;
-  font-size: 1.3em;
-  width: 40vw; }
-  .hero .hero-content-wrapper {
-    display: flex; }
-  .hero .hero-picture {
-    width: 279px; }
-    .hero .hero-picture .my-picture {
-      border-radius: 100%;
-      background: #371f84; }
-  .hero .hero-text {
-    margin-top: 2.2em; }
-
-@media (max-width: 1200px) {
-  .hero {
-    margin: 4em 0 15.9em 24vw; } }
-@media (max-width: 900px) {
-  .hero {
-    margin: 4em 0 18.5em 24vw; }
-    .hero .hero-content-wrapper {
-      flex-direction: column; }
-
-  .project-btn {
-    margin-top: 3.5em; } }
-@media (max-width: 685px) {
-  .hero {
-    margin: 6.5em 0 10.5em 24vw; } }
-@media (max-width: 600px) {
-  .hero {
-    margin: 6.5em 0 10.5em 24vw; } }
 .titles-container {
   display: flex;
   width: 100vw;
@@ -508,6 +506,43 @@ canvas {
     color: #272727;
     text-align: center;
     font-size: 2.5em; }
+
+.large-header {
+  position: relative;
+  height: 60vh !important;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1; }
+
+.network .large-header {
+  background-color: #fefefe; }
+
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #272727;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0); }
+
+.network .main-title {
+  text-transform: uppercase;
+  font-size: 4.2em;
+  letter-spacing: 0.1em; }
+
+.main-title .thin {
+  font-weight: 200; }
+
+@media only screen and (max-width: 768px) {
+  .network .main-title {
+    font-size: 3em; } }
+.content {
+  width: 100vw; }
 
 * {
   box-sizing: border-box; }

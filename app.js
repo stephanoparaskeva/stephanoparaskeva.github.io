@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {  
+
   
+  // Header animation
   (function() {
 
     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
-    // Main
     initHeader();
     initAnimation();
     addListeners();
@@ -25,10 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // create points
         points = [];
-        for(var x = 0; x < width; x = x + width/20) {
-            for(var y = 0; y < height; y = y + height/20) {
-                var px = x + Math.random()*width/20;
-                var py = y + Math.random()*height/20;
+        for(var x = 0; x < width; x = x + width*0.01) {
+            for(var y = 0; y < height; y = y + height*0.1) {
+                var px = x + Math.random()*width*0.1;
+                var py = y + Math.random()*height*0.1;
                 var p = {x: px, originX: px, y: py, originY: py };
                 points.push(p);
             }
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 var p2 = points[j]
                 if(!(p1 == p2)) {
                     var placed = false;
-                    for(var k = 0; k < 5; k++) {
+                    for(var k = 0; k < 7; k++) {
                         if(!placed) {
                             if(closest[k] == undefined) {
                                 closest[k] = p2;
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
 
-                    for(var k = 0; k < 5; k++) {
+                    for(var k = 0; k < 7; k++) {
                         if(!placed) {
                             if(getDistance(p1, p2) < getDistance(p1, closest[k])) {
                                 closest[k] = p2;
@@ -102,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resize() {
         width = window.innerWidth;
         height = window.innerHeight;
-        largeHeader.style.height = height+'px';
+        largeHeader.style.height = height/10+'vh';
         canvas.width = width;
         canvas.height = height;
     }
@@ -154,9 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if(!p.active) return;
         for(var i in p.closest) {
             ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
+            ctx.moveTo(p.x+1000, p.y+1000);
             ctx.lineTo(p.closest[i].x, p.closest[i].y);
-            ctx.strokeStyle = 'rgba(156,217,249,'+ p.active+')';
+            ctx.strokeStyle = 'rgba(73,65,189,'+ p.active+')';
             ctx.stroke();
         }
     }
@@ -175,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if(!_this.active) return;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(156,217,249,'+ _this.active+')';
+            ctx.fillStyle = 'rgba(181,47,47,'+ _this.active+')';
             ctx.fill();
         };
     }
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 
-// Produce sunburst
+// Sunburst plotly chart
 
 const data = [{
   type: 'sunburst',
@@ -202,10 +203,10 @@ const data = [{
   parents: [
             '', 'TECH', 'TECH', 'TECH', 'TECH', 'Front-End', 'Front-End', 'Front-End', 'Front-End', 'Front-End', 'Front-End',
             'Front-End', 'Front-End', 'Front-End', 'Front-End', 'Back-End', 'Back-End', 'Back-End', 'FRAMEWORKS', 'FRAMEWORKS', 
-            'FRAMEWORKS', 'Back-End', 'DATABASE', 'DATABASE', 'DATABASE', 'Version-Control', 'Version-Control', 'Version-Control', 
+            'FRAMEWORKS', 'Back-End', 'DATABASE', 'DATABASE', 'Version-Control', 'Version-Control', 'Version-Control', 'Version-Control', 
             'Version-Control', 'CLI', 'CLI', 'CLI', 'CLI', 'Methodologies', 'Methodologies', 'Methodologies', 'Methodologies', 'TESTING', 'TESTING'
           ],
-  outsidetextfont: {size: 30, color: 'grey'},
+  outsidetextfont: {size: 30, color: '#272727'},
   leaf: {opacity: 0.4},
   marker: {line: {width: 2}},
   }]
@@ -214,12 +215,163 @@ const layout = {
   margin: {l: 0, r: 0, b: 0, t: 0},
   width: 370,
   height: 370,
-  sunburstcolorway:["#363a3f","#62676d","#484a4c","#a6a7a8"]
+  sunburstcolorway:["#F2545B","#C47AC0","#DD5E98","#4941bd"],
+  paper_bgcolor: '#fefefe'
 }
   
 
 Plotly.newPlot('sunburst', data, layout, {showSendToCloud:true})
 
+// Technology
+icons = document.querySelectorAll('.tech-icon')
+
+  //javascript
+$(icons[0]).hover(
+  function() {
+  this.style.color = '#e6e01b'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //react
+$(icons[1]).hover(
+  function() {
+  this.style.color = '#679ed2'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //html5
+$(icons[2]).hover(
+  function() {
+  this.style.color = '#d85f40'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //css3
+$(icons[3]).hover(
+  function() {
+  this.style.color = '#3d8fc6'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //d3
+$(icons[4]).hover(
+  function() {
+  this.style.color = '#d28347'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //jQuery
+$(icons[5]).hover(
+  function() {
+  this.style.color = '#1c4663'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //heroku
+$(icons[6]).hover(
+  function() {
+  this.style.color = '#6762a6'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //express
+$(icons[7]).hover(
+  function() {
+  this.style.color = '#111111'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //webpack
+$(icons[8]).hover(
+  function() {
+  this.style.color = '#1c78c0'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //mongoDB
+$(icons[9]).hover(
+  function() {
+  this.style.color = '#519a46'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //postgreSQL
+$(icons[10]).hover(
+  function() {
+  this.style.color = '#336791'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //git
+$(icons[11]).hover(
+  function() {
+  this.style.color = '#f34f29'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //GitHub
+$(icons[12]).hover(
+  function() {
+  this.style.color = '#181616'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //mocha
+$(icons[13]).hover(
+  function() {
+  this.style.color = '#8d6748'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //python
+$(icons[14]).hover(
+  function() {
+  this.style.color = '#ffd845'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+  //node
+$(icons[15]).hover(
+  function() {
+  this.style.color = '#a2d664'
+  },
+  function() {
+  this.style.color = '#5f5f5f'
+  }
+)
+
+
+console.log("\nHey! Great to see you here. \n\nIf you want to talk more, send me an email:\n\nstephanokparaskeva@gmail.com")
 }) // DOM CLOSE
 
 

@@ -196,6 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const data = [{
   type: 'sunburst',
+  hoverinfo: 'none',
   labels: [
             'TECH', 'Front-End', 'Back-End', 'Version-Control', 'Methodologies', 'JavaScript', 
             'React', 'jQuery', 'HTML5', 'CSS3', 'SCSS', 'Webpack', 'Bulma', 'Plotly.js', 'Chart.js',

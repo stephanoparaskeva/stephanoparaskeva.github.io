@@ -439,11 +439,11 @@ $(button1).click(function() {
   button2.style[border] = '3.5px solid #9693b9d4'
   button3.style[border] = '3.5px solid #9693b9d4'
   button4.style[border] = '3.5px solid #9693b9d4'
-  $(phone1).removeClass(`animated ${upLeft} faster`)
+  $(phone1).removeClass(`${upLeft}`)
   $(clicked).addClass(`animated ${outRight} faster`)
   setTimeout(() => {
     $(phone1).addClass(`animated ${upLeft} faster`)
-    $(clicked).removeClass(`animated ${outRight} faster`)
+    $(clicked).removeClass(`${outRight}`)
     phone1.style.display = 'block'
     clicked.style.display = 'none'
     clicked = phone1
@@ -459,11 +459,11 @@ $(button2).click(function() {
   button1.style[border] = '3.5px solid #9693b9d4'
   button3.style[border] = '3.5px solid #9693b9d4'
   button4.style[border] = '3.5px solid #9693b9d4'
-  $(phone2).removeClass(`animated ${upLeft} faster`)
+  $(phone2).removeClass(`${upLeft}`)
   $(clicked).addClass(`animated ${outRight} faster`)
   setTimeout(() => {
     $(phone2).addClass(`animated ${upLeft} faster`)
-    $(clicked).removeClass(`animated ${outRight} faster`)
+    $(clicked).removeClass(`${outRight}`)
     phone2.style.display = 'block'
     clicked.style.display = 'none'
     clicked = phone2
@@ -479,11 +479,11 @@ $(button3).click(function() {
   button2.style[border] = '3.5px solid #9693b9d4'
   button1.style[border] = '3.5px solid #9693b9d4'
   button4.style[border] = '3.5px solid #9693b9d4'
-  $(phone3).removeClass(`animated ${upLeft} faster`)
+  $(phone3).removeClass(`${upLeft}`)
   $(clicked).addClass(`animated ${outRight} faster`)
   setTimeout(() => {
     $(phone3).addClass(`animated ${upLeft} faster`)
-    $(clicked).removeClass(`animated ${outRight} faster`)
+    $(clicked).removeClass(`${outRight}`)
     phone3.style.display = 'block'
     clicked.style.display = 'none'
     clicked = phone3
@@ -499,11 +499,11 @@ $(button4).click(function() {
   button2.style[border] = '3.5px solid #9693b9d4'
   button3.style[border] = '3.5px solid #9693b9d4'
   button1.style[border] = '3.5px solid #9693b9d4'
-  $(phone4).removeClass(`animated ${upLeft} faster`)
+  $(phone4).removeClass(`${upLeft}`)
   $(clicked).addClass(`animated ${outRight} faster`)
   setTimeout(() => {
     $(phone4).addClass(`animated ${upLeft} faster`)
-    $(clicked).removeClass(`animated ${outRight} faster`)
+    $(clicked).removeClass(`${outRight}`)
     phone4.style.display = 'block'
     clicked.style.display = 'none'
     clicked = phone4

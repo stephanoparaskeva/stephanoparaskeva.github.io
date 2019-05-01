@@ -555,11 +555,13 @@ body {
 .tech-btn {
   background: #fefefe; }
 
-.about-btn .my-picture {
-  border-radius: 100%; }
+.about-btn {
+  background: #e6e6e6; }
+  .about-btn .my-picture {
+    border-radius: 100%; }
 
 .contact-btn {
-  background: #272727; }
+  background: #b72d54; }
 
 header {
   top: 0;
@@ -625,7 +627,6 @@ canvas {
 
 .network .main-title {
   text-transform: uppercase;
-  font-size: 4.2em;
   letter-spacing: 0.1em; }
 
 .main-title .thin {

@@ -404,7 +404,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #232323;
+  background: #4941bd;
   color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif;
   overflow-x: hidden; }
@@ -686,7 +686,9 @@ canvas {
 
   #sub-title {
     top: 72%;
-    font-size: 1em; } }
+    font-size: 1em;
+    color: #111;
+    font-weight: 520; } }
 .content {
   width: 100vw; }
 

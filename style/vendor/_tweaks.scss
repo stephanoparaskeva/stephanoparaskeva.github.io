@@ -169,6 +169,44 @@ body
     }
 }
 
+.tech-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 80px;
+    padding-top: 30px;
+    .tech-list {
+        width: 400px;
+    }
+    .tech-stack {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .tech-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tech-list {
+        margin-left: 40px;
+    }
+    .tech-stack {
+        left: 200px;
+        margin-right: 130px;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .tech-list {
+        margin-left: 60px;
+    }
+    .tech-stack {
+        left: 200px;
+        margin-right: 50px;
+    }
+}
+
+
 @media only screen and (max-width: 661px) {
     .outside-technologies {
         font-size: 1em;
@@ -210,6 +248,14 @@ body
             margin-right: 3em;
             margin-left: 2em;
         }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .techskills-wrapper {
+        p {
+            font-size: 1.2em;
         }
     }
 }

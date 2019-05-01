@@ -3,11 +3,16 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-body {
-    margin: 0;
-    width: 100vw;
-    background-color: #4941bd;
-    overflow-x: hidden;
+body
+{
+  margin: 0;
+  padding: 0;
+
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  
+  overflow-x: hidden;
 }
 
  .tech-icon {
@@ -25,6 +30,7 @@ body {
     border-radius: 0.3%;
     width: 100vw;
     background-color: #4941bd;
+    color: #232323;
     overflow: hidden;
 }
 
@@ -178,17 +184,7 @@ body {
     #sunburst {
         margin-bottom: 4em;
     }
-  }
-// @media only screen and (max-width: 580px) {
-//     .outside-technologies {
-//         font-size: 0.8em;
-//     }
-//   }
-// @media only screen and (max-width: 450px) {
-//     .outside-technologies {
-//         font-size: 0.7em;
-//     }
-//   }
+}
 
 .techskills-wrapper {
     p {

@@ -374,6 +374,8 @@ $(icons[15]).hover(
 )
 
 
+//projects carousel
+
 button1 = document.querySelector('.button1')
 button2 = document.querySelector('.button2')
 button3 = document.querySelector('.button3')
@@ -384,17 +386,64 @@ phone2= document.querySelector('.phone2')
 phone3 = document.querySelector('.phone3')
 phone4 = document.querySelector('.phone4')
 
-//if ($(phone1).attr("class").split(' ').includes('animated')) {return}
-let clicked = phone2
-phone2.style.display = 'block'
+project1 = document.querySelector('.project1')
+project2 = document.querySelector('.project2')
+project3 = document.querySelector('.project3')
+project4 = document.querySelector('.project4')
+
+let clicked = phone1
+phone1.style.display = 'block'
+
+let upLeft = 'fadeInUp'
+let outRight = 'fadeOutUp'
+let border = 'borderLeft'
+
+const checkWidthDirection = function() {
+  if ($(window).width() < 990) {
+    outRight = 'fadeOutRight'
+    upLeft = 'fadeInLeft'
+    border = 'borderBottom'
+    button1.style.borderLeft = 'none'
+    button2.style.borderLeft = 'none'
+    button3.style.borderLeft = 'none'
+    button4.style.borderLeft = 'none'
+    button1.style.BorderBottom = '3.5px solid #ffffffd4'
+    button2.style.BorderBottom = '3.5px solid #9693b9d4'
+    button3.style.BorderBottom = '3.5px solid #9693b9d4'
+    button4.style.BorderBottom = '3.5px solid #9693b9d4'
+  } else if ($(window).width() > 990) {
+    outRight = 'fadeOutUp'
+    upLeft = 'fadeInUp'
+    border = 'borderLeft'
+    button1.style.borderBottom = 'none'
+    button2.style.borderBottom = 'none'
+    button3.style.borderBottom = 'none'
+    button4.style.borderBottom = 'none'
+    button1.style.borderLeft = '3.5px solid #ffffffd4'
+    button2.style.borderLeft = '3.5px solid #9693b9d4'
+    button3.style.borderLeft = '3.5px solid #9693b9d4'
+    button4.style.borderLeft = '3.5px solid #9693b9d4'
+  }
+}
+
+checkWidthDirection()
+$(window).resize(checkWidthDirection)
 
 $(button1).click(function() {
   if(phone1.style.display === 'block') {return}
-  $(phone1).removeClass('animated fadeInUp faster')
-  $(clicked).addClass('animated fadeOutUp faster')
+  project1.style.display = 'block'
+  project2.style.display = 'none'
+  project3.style.display = 'none'
+  project4.style.display = 'none'
+  button1.style[border] = '3.5px solid #ffffffd4'
+  button2.style[border] = '3.5px solid #9693b9d4'
+  button3.style[border] = '3.5px solid #9693b9d4'
+  button4.style[border] = '3.5px solid #9693b9d4'
+  $(phone1).removeClass(`animated ${upLeft} faster`)
+  $(clicked).addClass(`animated ${outRight} faster`)
   setTimeout(() => {
-    $(phone1).addClass('animated fadeInUp faster')
-    $(clicked).removeClass('animated fadeOutUp faster')
+    $(phone1).addClass(`animated ${upLeft} faster`)
+    $(clicked).removeClass(`animated ${outRight} faster`)
     phone1.style.display = 'block'
     clicked.style.display = 'none'
     clicked = phone1
@@ -402,11 +451,19 @@ $(button1).click(function() {
 })
 $(button2).click(function() {
   if(phone2.style.display === 'block') {return}
-  $(phone2).removeClass('animated fadeInUp faster')
-  $(clicked).addClass('animated fadeOutUp faster')
+  project2.style.display = 'block'
+  project1.style.display = 'none'
+  project3.style.display = 'none'
+  project4.style.display = 'none'
+  button2.style[border] = '3.5px solid #ffffffd4'
+  button1.style[border] = '3.5px solid #9693b9d4'
+  button3.style[border] = '3.5px solid #9693b9d4'
+  button4.style[border] = '3.5px solid #9693b9d4'
+  $(phone2).removeClass(`animated ${upLeft} faster`)
+  $(clicked).addClass(`animated ${outRight} faster`)
   setTimeout(() => {
-    $(phone2).addClass('animated fadeInUp faster')
-    $(clicked).removeClass('animated fadeOutUp faster')
+    $(phone2).addClass(`animated ${upLeft} faster`)
+    $(clicked).removeClass(`animated ${outRight} faster`)
     phone2.style.display = 'block'
     clicked.style.display = 'none'
     clicked = phone2
@@ -414,11 +471,19 @@ $(button2).click(function() {
 })
 $(button3).click(function() {
   if(phone3.style.display === 'block') {return}
-  $(phone3).removeClass('animated fadeInUp faster')
-  $(clicked).addClass('animated fadeOutUp faster')
+  project3.style.display = 'block'
+  project2.style.display = 'none'
+  project1.style.display = 'none'
+  project4.style.display = 'none'
+  button3.style[border] = '3.5px solid #ffffffd4'
+  button2.style[border] = '3.5px solid #9693b9d4'
+  button1.style[border] = '3.5px solid #9693b9d4'
+  button4.style[border] = '3.5px solid #9693b9d4'
+  $(phone3).removeClass(`animated ${upLeft} faster`)
+  $(clicked).addClass(`animated ${outRight} faster`)
   setTimeout(() => {
-    $(phone3).addClass('animated fadeInUp faster')
-    $(clicked).removeClass('animated fadeOutUp faster')
+    $(phone3).addClass(`animated ${upLeft} faster`)
+    $(clicked).removeClass(`animated ${outRight} faster`)
     phone3.style.display = 'block'
     clicked.style.display = 'none'
     clicked = phone3
@@ -426,16 +491,26 @@ $(button3).click(function() {
 })
 $(button4).click(function() {
   if(phone4.style.display === 'block') {return}
-  $(phone4).removeClass('animated fadeInUp faster')
-  $(clicked).addClass('animated fadeOutUp faster')
+  project4.style.display = 'block'
+  project2.style.display = 'none'
+  project3.style.display = 'none'
+  project1.style.display = 'none'
+  button4.style[border] = '3.5px solid #ffffffd4'
+  button2.style[border] = '3.5px solid #9693b9d4'
+  button3.style[border] = '3.5px solid #9693b9d4'
+  button1.style[border] = '3.5px solid #9693b9d4'
+  $(phone4).removeClass(`animated ${upLeft} faster`)
+  $(clicked).addClass(`animated ${outRight} faster`)
   setTimeout(() => {
-    $(phone4).addClass('animated fadeInUp faster')
-    $(clicked).removeClass('animated fadeOutUp faster')
+    $(phone4).addClass(`animated ${upLeft} faster`)
+    $(clicked).removeClass(`animated ${outRight} faster`)
     phone4.style.display = 'block'
     clicked.style.display = 'none'
     clicked = phone4
   }, 600)
 })
+
+
 
 
 console.log("\nHey! Great to see you here. \n\nIf you want to talk more, send me an email:\n\nstephanokparaskeva@gmail.com")

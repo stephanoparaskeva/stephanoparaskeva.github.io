@@ -8,7 +8,7 @@ body
   margin: 0;
   padding: 0;
 
-  background: #4941bd;
+  background: #b72d54;
   color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif;
   
@@ -151,7 +151,7 @@ body
 .spacer {
     display: block;
     content: "";
-    height: 0px;
+    height: 30px;
 }
 
 .outside-technologies {
@@ -159,7 +159,7 @@ body
     font-size: 1.2em;
     display: flex;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
     justify-content: center;
     width: 100vw;
     background: #e6e6e6;
@@ -170,11 +170,15 @@ body
     }
 }
 
+#technologies {
+    background: #e6e6e6;
+}
+
 .tech-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
     padding-top: 30px;
     .tech-list {
         width: 400px;
@@ -278,6 +282,10 @@ body
         border-radius: 100%;
         margin-left: 1.8em;
     }
+}
+
+#about {
+    background: #fff;
 }
 
 .contact-section {

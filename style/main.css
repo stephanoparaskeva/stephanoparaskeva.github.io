@@ -449,6 +449,7 @@ body {
         .project-container .buttons-content .button-wrapper .button.button1 {
           border-left: 3.5px solid #ffffffd4; }
     .project-container .buttons-content .project-wrapper {
+      display: inherit;
       margin-left: 10em; }
       .project-container .buttons-content .project-wrapper .project.project1 {
         display: block; }

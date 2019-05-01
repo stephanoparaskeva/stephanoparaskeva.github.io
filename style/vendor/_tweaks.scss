@@ -62,6 +62,7 @@ body
             }
         }
         .project-wrapper {
+            display: inherit;
             margin-left: 10em;
             .project {
                 &.project1 {

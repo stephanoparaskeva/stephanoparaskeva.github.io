@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="./style/main.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon.jpg"/>
     <script src="./app.js"></script>
     <script src="./lib/tweenLite.min.js"></script>
     <script src="./lib/easePack.min.js"></script>
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <meta charset="utf-8">
-    <title></title>
+    <title>Stephano Paraskeva</title>
   </head>
   <body>
       <div class="network">
@@ -20,6 +21,8 @@
              <div id="large-header" class="large-header">
                 <canvas id="network-canvas"></canvas>
                 <h1 class="main-title"><span class="thin">STEPHANΩ</span> PARASKEVA</h1>
+                <h6 class="main-title" id="sub-title"><span>Junior Developer / Software Engineer</span></h6>
+                
              </div>
           </div>
        </div>
@@ -27,7 +30,7 @@
       <nav class="navbar">
         <a class="project-nav" href="#project">projects</a>            
         <a href="#technologies">tech</a>
-        <a href="#top">logo</a>
+        <a href="#top"><span class="span-line">|</span> S.P. <span class="span-line">|</span></a>
         <a href="#about">about</a>
         <a href="#contact">contact</a>
       </nav>
@@ -41,9 +44,9 @@
             <span></span>
             
             <ul id="menu">
+              <a href="#top"><li>top</li></a>
               <a href="#project"><li>projects</li></a>
               <a href="#technologies"><li>tech</li></a>
-              <a href="#top"><li>logo</li></a>
               <a href="#about"><li>about</li></a>
               <a href="#contact"><li>contact</li></a>
             </ul>
@@ -53,7 +56,7 @@
     <main>
       </section>
       <div class="spacer" id="project"></div>
-      <section class="project-btn">
+      <section class="project-section">
         <div class="titles-container"><a id="project-title" class="titles" href="#project">projects</a></div>
         <div class="container project-container">
           
@@ -99,7 +102,6 @@
 
         </div>
       </section>
-      <div class="spacer" id="technologies"></div>
       <div class="outside-technologies">
         <div class="row tech-road">
           <i class="tech-icon devicon-javascript-plain"></i>
@@ -120,7 +122,8 @@
           <i class="tech-icon devicon-nodejs-plain"></i>
         </div>
       </div>
-      <section class="tech-btn">
+      <div class="spacer" id="technologies"></div>
+      <section class="tech-section">
         <div class="titles-container"><a class="titles" href="#technologies">technologies</a></div>
         <div class="container">
           <div class="row">
@@ -191,7 +194,7 @@
         </div>
         </section>
         <div class="spacer" id="about"></div>
-        <section class="about-btn">
+        <section class="about-section">
           <div class="titles-container"><a class="titles" href="#about">about</a></div>
           <div class="container">
             <div class="row">
@@ -216,7 +219,7 @@
         </div>
       </section>
       <div class="spacer" id="contact"></div>
-      <section class="contact-btn">
+      <section class="contact-section">
         <div class="titles-container"><a class="titles" href="#contact">contact</a></div>
         <div class="container">
           <!-- <div class="row">CONTACT ME AT</div>  -->

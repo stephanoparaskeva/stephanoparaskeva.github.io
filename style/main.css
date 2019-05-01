@@ -413,9 +413,10 @@ body {
   font-size: 2.3em; }
 
 .modebar {
-  display: none !important; }
+  display: none !important;
+  margin-left: 1.8em; }
 
-.about-btn, .tech-btn, .project-btn, .contact-btn {
+.about-section, .tech-section, .project-section, .contact-section {
   left: 0;
   scroll-snap-align: start;
   word-wrap: break-word;
@@ -425,7 +426,7 @@ body {
   color: #232323;
   overflow: hidden; }
 
-.project-btn {
+.project-section {
   color: #efefef; }
 
 .project-container {
@@ -544,26 +545,33 @@ body {
   font-size: 0.4em;
   vertical-align: middle;
   color: #4941bd; }
-.techskills-wrapper .techskills-outline-box .techskills-inner-wrapper {
-  display: flex;
-  flex-direction: row; }
-  .techskills-wrapper .techskills-outline-box .techskills-inner-wrapper .techskills-box-right {
-    margin-left: 5em; }
+.techskills-wrapper .techskills-outline-box {
+  margin-top: 2em; }
+  .techskills-wrapper .techskills-outline-box .techskills-inner-wrapper {
+    display: flex;
+    flex-direction: row; }
+    .techskills-wrapper .techskills-outline-box .techskills-inner-wrapper .techskills-box-right {
+      margin-left: 3em; }
+    .techskills-wrapper .techskills-outline-box .techskills-inner-wrapper .techskills-box-left {
+      margin-right: 3em;
+      margin-left: 2em; }
 
 #sunburst {
   width: 100%;
   height: 100%;
   background-color: #fefefe; }
 
-.tech-btn {
+.tech-section {
   background: #fefefe; }
 
-.about-btn {
+.about-section {
+  padding-bottom: 4em;
   background: #e6e6e6; }
-  .about-btn .my-picture {
-    border-radius: 100%; }
+  .about-section .my-picture {
+    border-radius: 100%;
+    margin-left: 1.8em; }
 
-.contact-btn {
+.contact-section {
   background: #b72d54; }
 
 header {
@@ -583,6 +591,8 @@ header {
     justify-content: space-around;
     width: 50vw;
     text-align: center; }
+    header .navbar .span-line {
+      color: #b72d54; }
     header .navbar a {
       text-decoration: none;
       color: #272727; }
@@ -628,6 +638,9 @@ canvas {
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0); }
 
+#sub-title {
+  top: 65%; }
+
 .network .main-title {
   text-transform: uppercase;
   letter-spacing: 0.1em; }
@@ -637,7 +650,11 @@ canvas {
 
 @media only screen and (max-width: 768px) {
   .network .main-title {
-    font-size: 3em; } }
+    font-size: 3em; }
+
+  #sub-title {
+    top: 72%;
+    font-size: 1em; } }
 .content {
   width: 100vw; }
 

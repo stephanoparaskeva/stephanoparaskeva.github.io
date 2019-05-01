@@ -165,21 +165,30 @@ body {
 @media only screen and (max-width: 661px) {
     .outside-technologies {
         font-size: 1em;
+        .tech-road {
+            flex-wrap: wrap;
+            .tech-icon {
+                margin-top: 1em;
+                margin-right: 0.5em;
+                margin-left: 0.5em;
+                 
+            }
+        }
     }
     #sunburst {
         margin-bottom: 4em;
     }
   }
-@media only screen and (max-width: 580px) {
-    .outside-technologies {
-        font-size: 0.8em;
-    }
-  }
-@media only screen and (max-width: 450px) {
-    .outside-technologies {
-        font-size: 0.7em;
-    }
-  }
+// @media only screen and (max-width: 580px) {
+//     .outside-technologies {
+//         font-size: 0.8em;
+//     }
+//   }
+// @media only screen and (max-width: 450px) {
+//     .outside-technologies {
+//         font-size: 0.7em;
+//     }
+//   }
 
 .techskills-wrapper {
     p {

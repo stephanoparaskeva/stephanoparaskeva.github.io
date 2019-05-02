@@ -518,7 +518,7 @@ body {
   font-size: 1.2em;
   display: flex;
   padding-top: 80px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   justify-content: center;
   width: 100vw;
   background: #e6e6e6; }
@@ -537,11 +537,16 @@ body {
   padding-bottom: 50px;
   padding-top: 30px; }
   .tech-container .tech-list {
-    width: 400px; }
+    width: 400px;
+    padding-bottom: 50px; }
   .tech-container .tech-stack {
     width: 300px; }
 
 @media only screen and (max-width: 990px) {
+  .outside-technologies {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+
   .tech-container {
     flex-direction: column;
     align-items: center; }

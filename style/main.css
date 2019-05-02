@@ -453,7 +453,8 @@ body {
       margin-left: 10em; }
       .project-container .buttons-content .project-wrapper .project {
         font-size: 15px;
-        margin-right: 0.8em; }
+        margin-right: 0.8em;
+        height: 200px; }
         .project-container .buttons-content .project-wrapper .project span {
           width: 100%;
           display: flex;

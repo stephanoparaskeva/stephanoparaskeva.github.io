@@ -68,9 +68,6 @@ body
                 font-size: 15px;
                 margin-right: 0.8em;
                 height: 200px;
-                p {
-                    // text-align: center;
-                }
                 span {
                     // color: #272727;
                     width: 100%;
@@ -161,9 +158,10 @@ body
         .phones-wrapper {
             order: 2;
             .phone {
-                margin: 0 auto;
+                margin: 2em auto 0 auto;
                 height: 560px;
                 width: 282px;
+                padding-top: 0.5em;
             }
         }
     }

@@ -204,10 +204,10 @@ const data = [{
             'Agile', 'REST', 'CRUD', 'TESTING', 'Mocha', 'Chai'
           ],
   parents: [
-            '', 'TECH', 'TECH', 'TECH', 'TECH', 'Front-End', 'Front-End', 'Front-End', 'Front-End', 'Front-End', 'Front-End',
+            '', 'TECH', 'TECH', 'CLI', 'TECH', 'Front-End', 'Front-End', 'Front-End', 'Front-End', 'Front-End', 'Front-End',
             'Front-End', 'Front-End', 'Front-End', 'Front-End', 'Back-End', 'Back-End', 'Back-End', 'FRAMEWORKS', 'FRAMEWORKS', 
-            'FRAMEWORKS', 'Back-End', 'DATABASE', 'DATABASE', 'Version-Control', 'Version-Control', 'Version-Control', 'Version-Control', 
-            'Version-Control', 'CLI', 'CLI', 'CLI', 'CLI', 'Methodologies', 'Methodologies', 'Methodologies', 'Methodologies', 'TESTING', 'TESTING'
+            'FRAMEWORKS', 'Back-End', 'DATABASE', 'DATABASE', 'Version-Control', 'Version-Control', 'Version-Control', 'TECH', 
+            'CLI', 'CLI', 'CLI', 'CLI', 'CLI', 'Methodologies', 'Methodologies', 'Methodologies', 'Methodologies', 'TESTING', 'TESTING'
           ],
   outsidetextfont: {size: 30, color: '#272727'},
   leaf: {opacity: 0.4},

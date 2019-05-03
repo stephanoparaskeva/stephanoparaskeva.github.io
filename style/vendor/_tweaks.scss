@@ -217,6 +217,21 @@ body
     background: #fefefe;
 }
 
+.about-text {
+    .about-intro {
+        margin-top: 30px;
+        font-weight: 500;
+    }
+
+    .about-paragraph-1 {
+
+    }
+
+    .about-paragraph-2 {
+        margin-top: 30px;
+    }
+}
+
 @media only screen and (max-width: 990px) {
     .outside-technologies {
         padding-top: 40px;

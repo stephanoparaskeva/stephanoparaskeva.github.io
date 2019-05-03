@@ -636,9 +636,13 @@ body {
   padding-bottom: 4em;
   background: #e6e6e6; }
   .about-section .my-picture {
+    padding-top: 4em;
     border-radius: 100%;
     margin-left: 1.8em; }
 
+@media only screen and (max-width: 990px) {
+  .about-section .my-picture {
+    padding-top: 2em; } }
 #about {
   background: #fff; }
 

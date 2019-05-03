@@ -627,7 +627,8 @@ body {
 #sunburst {
   width: 100%;
   height: 100%;
-  background-color: #fefefe; }
+  background-color: #fefefe;
+  padding-top: 2em; }
 
 .tech-section {
   background: #fefefe; }
@@ -642,13 +643,51 @@ body {
 
 @media only screen and (max-width: 990px) {
   .about-section .my-picture {
-    padding-top: 2em; } }
+    padding-top: 2em; }
+
+  #sunburst {
+    padding-top: 0; } }
 #about {
   background: #fff; }
 
 .contact-section {
-  background: #b72d54; }
+  background: #b72d54;
+  margin-bottom: 4em;
+  color: #673ab7; }
+  .contact-section #contact-title {
+    color: #fff; }
 
+.contact-links {
+  text-align: start;
+  font-size: 1.53em;
+  display: flex;
+  flex-direction: column; }
+  .contact-links span {
+    padding-top: 0.4em; }
+  .contact-links a {
+    color: white; }
+  .contact-links .contact-info {
+    margin-right: 1em; }
+    .contact-links .contact-info.contact-linkedin {
+      margin-right: 1.4em; }
+
+@media only screen and (max-width: 990px) {
+  .contact-container {
+    justify-content: center;
+    display: flex; }
+
+  .contact-links {
+    text-align: start;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    width: 300px; }
+    .contact-links span {
+      padding-top: 1.1em; }
+    .contact-links .contact-info {
+      margin-right: 1em; }
+      .contact-links .contact-info.contact-linkedin {
+        margin-right: 1.4em; } }
 header {
   top: 0;
   display: flex;

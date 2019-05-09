@@ -503,6 +503,16 @@ canvas {
         font-weight: 520;
     }
  }
+ @media only screen and (min-width: 600px) {
+        .main-title {
+            width: 1000px;
+        }
+ }
+//  @media only screen and (max-width: 600px) {
+//         .main-title {
+//             width: 6px;
+//         }
+//  }
  
  .content {
      width: 100vw;

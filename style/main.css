@@ -215,9 +215,6 @@ h6 {
 
 /* Larger than phablet */
 @media (max-width: 1200px) {
-  h1 {
-    font-size: 4.0rem; }
-
   h2 {
     font-size: 4.2rem; }
 
@@ -771,6 +768,9 @@ canvas {
     font-size: 1em;
     color: #111;
     font-weight: 520; } }
+@media only screen and (min-width: 600px) {
+  .main-title {
+    width: 1000px; } }
 .content {
   width: 100vw; }
 
